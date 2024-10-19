@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerfectFit Clothing - Discover Your Ideal Fit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        :root {
+            --primary-color: #3a506b;
+            --secondary-color: #5bc0be;
+            --accent-color: #fca311;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        #showcase {
+            background: url('/api/placeholder/1500/800') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            position: relative;
+        }
+        
+        #showcase::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        #showcase .showcase-content {
+            z-index: 2;
+            position: relative;
+        }
+        
+        #showcase h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        #showcase p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #ffffff;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #e69100;
+        }
+        
+        #fit-guide {
+            padding: 80px 0;
+            background-color: #ffffff;
+        }
+        
+        .fit-boxes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .fit-box {
+            flex-basis: 30%;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--background-color);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .fit-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .fit-box img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        
+        #clothing-items {
+            padding: 80px 0;
+        }
+        
+        .items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .item {
+            flex-basis: 48%;
+            background-color: #ffffff;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .item img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .fit-boxes, .items {
+                flex-direction: column;
+            }
+            
+            .fit-box, .item {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">PerfectFit</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fit-guide">Fit Guide</a></li>
+                <li><a href="#clothing-items">Our Clothes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="showcase">
+        <div class="container showcase-content">
+            <h1>Discover Your Perfect Fit</h1>
+            <p>Experience unparalleled comfort and style with our expertly tailored clothing</p>
+            <a href="/landing page/images/perfect fit image.jpg" class="btn">click here</a>
+        </div>
+    </section>
+
+    <section id="fit-guide">
+        <div class="container">
+            <h2>Understanding Our Fit</h2>
+            <div class="fit-boxes">
+                <div class="fit-box">
+                    <img src="/landing page/images/slimfit.png" alt="Slim Fit">
+                    <h3>Slim Fit</h3>
+                    <p>Tailored close to the body for a modern, sleek look</p>
+                </div>
+                <div class="fit-box">
+                    <img src="/landing page/images/regular fit.png" alt="Regular Fit">
+                    <h3>Regular Fit</h3>
+                    <p>Classic fit with room for comfort and easy movement</p>
+                </div>
+                <div class="fit-box">
+                    <img src="/landing page/images/relaxed fit.png" alt="Relaxed Fit">
+                    <h3>Relaxed Fit</h3>
+                    <p>Looser fit for maximum comfort and a casual style</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clothing-items">
+        <div class="container">
+            <h2>Our Signature Pieces</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="/landing page/images/tee.jpg" alt="Premium Cotton T-Shirt">
+                    <h3>Premium Cotton T-Shirt</h3>
+                    <p>Our slim-fit t-shirt hugs your body contours without being too tight. The length hits just below the belt, and the sleeves end mid-bicep for a modern look. The slim fit accentuates your physique while allowing for comfortable movement.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="item">
+                    <img src="/landing page/images/classic denim.png" alt="Classic Denim Jeans">
+                    <h3>Classic Denim Jeans</h3>
+                    <p>Our regular fit jeans offer a timeless style with a comfortable fit. They sit naturally at the waist and provide a straight leg from hip to ankle. With just the right amount of room in the thigh and leg opening, these jeans ensure all-day comfort without sacrificing style.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 PerfectFit Clothing. All rights reserved.</p>
+    </footer>
+</body>
+</html>
